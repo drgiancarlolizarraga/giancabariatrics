@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gianca Bariatrics — Gastric Sleeve in Tijuana | Dr. Giancarlo Lizárraga</title>
+<link rel="alternate" hreflang="es" href="https://giancabariatrics.com/manga-gastrica">
+<link rel="alternate" hreflang="en" href="https://giancabariatrics.com/en/gastric-sleeve">
+<link rel="alternate" hreflang="x-default" href="https://giancabariatrics.com/manga-gastrica">
+
+<meta name="description" content="Gastric sleeve surgery in Tijuana with a surgeon certified by the Mexican Board of General Surgery. 500+ surgeries performed. Book your free consultation with Dr. Giancarlo Lizárraga.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=DM+Sans:wght@400;500;600;700&family=Fraunces:ital,wght@0,400;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  /* ============================================================
+     PALETA GIANCA BARIATRICS (oct 2026)
+     Azul claro = fondo principal · Terracota = acentos y botones
+     ============================================================ */
+  :root {
+    /* Azules */
+    --blue: #BBCFF4;         /* periwinkle principal */
+    --blue-soft: #DCE6FA;    /* azul muy claro */
+    --blue-mist: #EEF3FC;    /* casi blanco azulado */
+    --blue-deep: #5F7FC4;    /* azul medio */
+    --blue-strong: #4A68AD;  /* azul para barra superior */
+
+    /* Terracota y arena */
+    --terra: #BF7349;        /* terracota (acentos grandes) */
+    --terra-deep: #BF7349;   /* terracota de marca (botones, cursivas) */
+    --terra-hover: #A35B35;
+    --terra-text: #A35B35;   /* solo etiquetas pequeñas, para que se lean */
+    --sand: #D7A781;         /* arena */
+    --sand-soft: #F7EEE5;    /* arena muy clara */
+
+    /* Neutros */
+    --white: #FFFFFF;
+    --ink: #22304F;          /* títulos */
+    --text: #2C3958;         /* texto normal */
+    --text-soft: #4D5A75;
+    --text-muted: #6E7A93;
+    --border: rgba(34, 48, 79, 0.10);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+    background: var(--blue-mist);
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+
+  img { max-width: 100%; display: block; }
+  a { text-decoration: none; color: inherit; }
+
+  /* === Top Bar === */
+  .topbar {
+    background: var(--blue-strong);
+    color: rgba(255,255,255,0.9);
+    text-align: center;
+    padding: 10px 16px;
+    font-size: 11.5px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .topbar span { color: #fff; font-weight: 700; }
+
+  /* === Header === */
+  header {
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 12px 20px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .brand { display: flex; align-items: center; gap: 11px; }
+  .brand-logo { height: 60px; width: auto; display: block; }
+  .header-cta {
+    background: var(--terra-deep);
+    color: white;
+    padding: 9px 14px;
+    border-radius: 100px;
+    font-size: 12.5px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+  }
+  .header-cta:hover { background: var(--terra-hover); transform: translateY(-1px); }
+  .header-cta svg { width: 14px; height: 14px; }
+
+  /* === Hero === */
+  .hero {
+    background: linear-gradient(180deg, var(--blue-soft) 0%, var(--blue) 100%);
+    color: var(--ink);
+    padding: 44px 24px 56px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: -35%; right: -40%;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(255,255,255,0.65) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    bottom: -50%; left: -30%;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(215, 167, 129, 0.22) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .hero-inner { position: relative; z-index: 2; }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.7);
+    border: 1px solid rgba(191, 115, 73, 0.25);
+    color: var(--terra-text);
+    padding: 7px 13px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+  }
+  .hero-badge::before {
+    content: "";
+    width: 6px; height: 6px;
+    background: var(--terra);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+  .hero h1 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    font-size: clamp(34px, 9vw, 56px);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    margin-bottom: 18px;
+    color: var(--ink);
+  }
+  .hero h1 em {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--terra-deep);
+  }
+  .hero-sub {
+    font-size: 16.5px;
+    line-height: 1.55;
+    color: var(--text-soft);
+    margin-bottom: 28px;
+    max-width: 540px;
+  }
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--terra-deep);
+    color: white;
+    padding: 16px 26px;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: -0.01em;
+    box-shadow: 0 8px 24px rgba(191, 115, 73, 0.30);
+    transition: all 0.25s;
+  }
+  .hero-cta:hover {
+    background: var(--terra-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(191, 115, 73, 0.40);
+  }
+  .hero-cta svg { width: 18px; height: 18px; }
+
+  .hero-trust {
+    display: flex;
+    gap: 22px;
+    margin-top: 32px;
+    padding-top: 26px;
+    border-top: 1px solid rgba(34, 48, 79, 0.12);
+    flex-wrap: wrap;
+  }
+  .hero-trust-item { display: flex; flex-direction: column; }
+  .hero-trust-num {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    color: var(--terra-deep);
+    line-height: 1;
+  }
+  .hero-trust-label {
+    font-size: 11px;
+    color: var(--text-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 5px;
+    font-weight: 600;
+  }
+
+  /* === Welcome strip === */
+  .welcome {
+    background: var(--white);
+    padding: 22px 24px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+  .welcome-icon {
+    width: 48px; height: 48px;
+    background: var(--sand-soft);
+    border: 1px solid var(--sand);
+    border-radius: 50%;
+    margin: 0 auto 14px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--terra-deep);
+  }
+  .welcome-icon svg { width: 24px; height: 24px; }
+  .welcome h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--ink);
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+  .welcome p {
+    font-size: 14.5px;
+    color: var(--text-soft);
+    max-width: 420px;
+    margin: 0 auto;
+    line-height: 1.55;
+  }
+
+  .perks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 22px;
+  }
+  .perk {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .perk svg {
+    width: 18px; height: 18px;
+    color: var(--terra-deep);
+    flex-shrink: 0;
+  }
+
+  /* === Section base === */
+  section { padding: 64px 24px; }
+  .section-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--terra-text);
+    margin-bottom: 14px;
+  }
+  .section-label::before { content: "—"; margin-right: 8px; }
+  h2.section-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: clamp(28px, 7vw, 38px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 18px;
+  }
+  h2.section-title em {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--terra-deep);
+  }
+  .section-sub {
+    font-size: 16px;
+    color: var(--text-soft);
+    line-height: 1.6;
+    margin-bottom: 36px;
+  }
+
+  /* === Empathy === */
+  .empathy { background: var(--white); }
+  .empathy-quote {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 24px;
+    line-height: 1.4;
+    color: var(--ink);
+    border-left: 3px solid var(--terra);
+    padding: 4px 0 4px 20px;
+    margin: 32px 0;
+  }
+  .empathy p {
+    font-size: 16px;
+    color: var(--text-soft);
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+
+  /* === Stakes === */
+  .stakes {
+    background: var(--blue);
+    color: var(--ink);
+    position: relative;
+    overflow: hidden;
+  }
+  .stakes::before {
+    content: "";
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 320px; height: 320px;
+    background: radial-gradient(circle, rgba(255,255,255,0.5) 0%, transparent 70%);
+  }
+  .stakes-inner { position: relative; z-index: 2; }
+  .stakes-intro { color: var(--text); font-size: 16px; line-height: 1.6; }
+  .stakes-list { list-style: none; margin-top: 24px; }
+  .stakes-item {
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(34, 48, 79, 0.12);
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+  }
+  .stakes-item:last-child { border-bottom: none; }
+  .stakes-num {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 22px;
+    color: var(--terra-deep);
+    line-height: 1;
+    min-width: 32px;
+  }
+  .stakes-text { font-size: 16px; line-height: 1.5; color: var(--text); }
+  .stakes-text strong { color: var(--ink); font-weight: 700; }
+
+  /* === Mid CTA === */
+  .mid-cta { background: var(--sand-soft); padding: 40px 24px; text-align: center; }
+  .mid-cta p {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: var(--ink);
+    margin-bottom: 20px;
+    line-height: 1.4;
+  }
+  .mid-cta p strong { font-style: normal; color: var(--terra-deep); }
+
+  /* === Authority === */
+  .authority { background: var(--blue-mist); }
+  .authority-card {
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(34, 48, 79, 0.07);
+    margin-top: 24px;
+  }
+  .authority-photo {
+    background: linear-gradient(135deg, var(--blue-soft), var(--blue));
+    aspect-ratio: 4 / 5;
+    width: 100%;
+  }
+  .authority-body { padding: 28px 24px; }
+  .authority-name {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    color: var(--ink);
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+  .authority-title {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--terra-deep);
+    margin-bottom: 18px;
+  }
+  .authority-text { font-size: 14.5px; color: var(--text-soft); line-height: 1.6; }
+  .authority-creds { list-style: none; margin-top: 18px; }
+  .authority-creds li {
+    padding: 12px 0;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14.5px;
+    color: var(--text);
+    font-weight: 500;
+  }
+  .authority-creds li::before {
+    content: "";
+    width: 6px; height: 6px;
+    background: var(--terra);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* === Hospital Gallery === */
+  .hospital { background: var(--white); }
+  .hospital-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 28px;
+  }
+  .hospital-photo {
+    aspect-ratio: 1 / 1;
+    background: linear-gradient(135deg, var(--blue-soft), var(--blue-deep));
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 14px;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .hospital-photo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 50%, rgba(34, 48, 79, 0.75) 100%);
+  }
+  .hospital-photo span { position: relative; z-index: 2; }
+  .hospital-note {
+    margin-top: 22px;
+    padding: 16px 20px;
+    background: var(--blue-mist);
+    border-left: 3px solid var(--terra);
+    border-radius: 2px;
+    font-size: 14px;
+    color: var(--text-soft);
+    line-height: 1.55;
+    font-style: italic;
+  }
+  .hospital-note strong { color: var(--ink); font-style: normal; }
+
+  /* === Value Prop === */
+  .value { background: var(--blue-soft); }
+  .value-grid { display: grid; gap: 14px; margin-top: 28px; }
+  .value-item {
+    background: var(--white);
+    padding: 22px;
+    border-radius: 6px;
+    border-left: 3px solid var(--terra);
+    box-shadow: 0 1px 4px rgba(34, 48, 79, 0.05);
+  }
+  .value-item-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--ink);
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
+  }
+  .value-item-desc { font-size: 14.5px; color: var(--text-soft); line-height: 1.55; }
+
+  /* === Financing === */
+  .financing {
+    background: linear-gradient(135deg, var(--blue) 0%, var(--blue-soft) 100%);
+    color: var(--ink);
+    padding: 48px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .financing::before {
+    content: "";
+    position: absolute;
+    top: -40%; right: -20%;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(215, 167, 129, 0.25) 0%, transparent 60%);
+  }
+  .financing-inner { position: relative; z-index: 2; }
+  .financing-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--terra-hover);
+    margin-bottom: 14px;
+  }
+  .financing h3 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+  .financing h3 em { font-family: 'Fraunces', serif; font-style: italic; font-weight: 500; color: var(--terra-deep); }
+  .financing-amount { display: flex; align-items: baseline; gap: 8px; margin: 24px 0 18px; }
+  .financing-from {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--text);
+  }
+  .financing-num {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    font-size: 56px;
+    line-height: 1;
+    color: var(--terra-deep);
+    letter-spacing: -0.03em;
+  }
+  .financing-currency {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--terra-deep);
+  }
+  .financing-period { font-size: 14px; color: var(--text-soft); margin-bottom: 24px; }
+  .financing-note {
+    background: rgba(255,255,255,0.75);
+    border: 1px solid rgba(191, 115, 73, 0.2);
+    border-radius: 6px;
+    padding: 16px;
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--text);
+    margin-bottom: 24px;
+  }
+  .financing-note strong { color: var(--terra-deep); }
+
+  /* === Plan === */
+  .plan { background: var(--blue-mist); }
+  .plan-steps { margin-top: 28px; }
+  .plan-step {
+    background: white;
+    border-radius: 6px;
+    padding: 24px;
+    margin-bottom: 14px;
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    box-shadow: 0 1px 4px rgba(34, 48, 79, 0.05);
+  }
+  .plan-step-num {
+    width: 40px; height: 40px;
+    background: var(--blue);
+    color: var(--terra-deep);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .plan-step-body { flex: 1; }
+  .plan-step-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--ink);
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
+  }
+  .plan-step-desc { font-size: 14.5px; color: var(--text-soft); line-height: 1.55; }
+
+  /* === Testimonios === */
+  .testimonials { background: white; }
+  .testimonial {
+    background: var(--sand-soft);
+    border-radius: 6px;
+    padding: 28px 24px;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .testimonial::before {
+    content: "“";
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 64px;
+    color: var(--terra);
+    position: absolute;
+    top: 6px; left: 18px;
+    line-height: 1;
+    opacity: 0.35;
+  }
+  .testimonial-text {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--ink);
+    margin-bottom: 18px;
+    position: relative;
+    z-index: 1;
+    padding-top: 8px;
+  }
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(191, 115, 73, 0.15);
+  }
+  .testimonial-avatar {
+    width: 42px; height: 42px;
+    background: var(--blue);
+    color: var(--ink);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+  }
+  .testimonial-name {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 14.5px;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+  .testimonial-meta { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+
+  /* === FAQ === */
+  .faq { background: var(--blue-soft); }
+  .faq-item {
+    background: white;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .faq-q {
+    padding: 18px 50px 18px 20px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 15.5px;
+    color: var(--ink);
+    cursor: pointer;
+    position: relative;
+    list-style: none;
+    line-height: 1.35;
+  }
+  .faq-q::-webkit-details-marker { display: none; }
+  .faq-q::after {
+    content: "+";
+    position: absolute;
+    right: 20px; top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Fraunces', serif;
+    font-size: 24px;
+    color: var(--terra-deep);
+    transition: transform 0.25s;
+  }
+  details[open] .faq-q::after { transform: translateY(-50%) rotate(45deg); }
+  .faq-a { padding: 0 20px 20px; font-size: 14.5px; color: var(--text-soft); line-height: 1.6; }
+
+  /* === Location === */
+  .location { background: var(--blue-mist); }
+  .location-card {
+    background: white;
+    border-radius: 8px;
+    padding: 28px 24px;
+    margin-top: 28px;
+    box-shadow: 0 2px 10px rgba(34, 48, 79, 0.07);
+    border-left: 3px solid var(--terra);
+  }
+  .location-place {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    color: var(--ink);
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+  .location-room {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--terra-deep);
+    margin-bottom: 14px;
+  }
+  .location-address { font-size: 15px; color: var(--text); line-height: 1.6; margin-bottom: 24px; }
+  .location-hint { font-size: 14px; color: var(--text-soft); line-height: 1.55; margin-bottom: 24px; }
+  .btn-map {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    color: var(--terra-deep);
+    border: 2px solid var(--terra-deep);
+    padding: 13px 22px;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 14.5px;
+    transition: all 0.2s;
+  }
+  .btn-map:hover { background: var(--terra-deep); color: white; }
+  .btn-map svg { width: 18px; height: 18px; }
+
+  /* === Final CTA === */
+  .final-cta {
+    background: linear-gradient(180deg, var(--blue) 0%, var(--blue-soft) 100%);
+    color: var(--ink);
+    padding: 64px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .final-cta::before {
+    content: "";
+    position: absolute;
+    top: -30%; left: -30%;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(255,255,255,0.55) 0%, transparent 60%);
+  }
+  .final-cta::after {
+    content: "";
+    position: absolute;
+    bottom: -40%; right: -30%;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(215, 167, 129, 0.25) 0%, transparent 60%);
+  }
+  .final-cta-inner { position: relative; z-index: 2; }
+  .final-cta h2 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    font-size: clamp(30px, 8vw, 44px);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    margin-bottom: 16px;
+    color: var(--ink);
+  }
+  .final-cta h2 em {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--terra-deep);
+  }
+  .final-cta p {
+    font-size: 16px;
+    color: var(--text-soft);
+    line-height: 1.55;
+    margin: 0 auto 32px;
+    max-width: 460px;
+  }
+  .final-cta .response-time { margin-top: 24px; margin-bottom: 0; font-size: 13px; color: var(--text-muted); }
+
+  /* === Footer === */
+  footer {
+    background: var(--white);
+    color: var(--text-soft);
+    padding: 36px 24px 100px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.7;
+    border-top: 3px solid var(--blue);
+  }
+  .footer-links {
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    font-size: 12px;
+  }
+  .footer-links a { color: var(--blue-strong); font-weight: 600; }
+  .footer-copy { margin-top: 18px; font-size: 11px; color: var(--text-muted); }
+
+  /* === Floating WhatsApp === */
+  .float-wa {
+    position: fixed;
+    bottom: 20px; right: 20px;
+    background: var(--terra-deep);
+    color: white;
+    padding: 14px 20px 14px 16px;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 8px 24px rgba(191, 115, 73, 0.40);
+    z-index: 99;
+    transition: all 0.25s;
+  }
+  .float-wa:hover { background: var(--terra-hover); transform: translateY(-2px); }
+  .float-wa svg { width: 22px; height: 22px; }
+
+  /* === Reusable buttons === */
+  .btn-wa, .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--terra-deep);
+    color: white;
+    padding: 16px 26px;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: -0.01em;
+    box-shadow: 0 6px 18px rgba(191, 115, 73, 0.28);
+    transition: all 0.25s;
+  }
+  .btn-wa:hover, .btn-primary:hover {
+    background: var(--terra-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(191, 115, 73, 0.38);
+  }
+  .btn-wa svg, .btn-primary svg { width: 18px; height: 18px; }
+
+  /* === Responsive === */
+  @media (min-width: 720px) {
+    .hero { padding: 80px 48px 90px; }
+    section { padding: 80px 48px; }
+    .welcome { padding: 36px 48px; }
+    .value-grid { grid-template-columns: 1fr 1fr; }
+    .float-wa { padding: 16px 24px 16px 18px; }
+  }
+  @media (min-width: 960px) {
+    .section-label { display: block; }
+    .hero { padding: 100px 80px 120px; }
+    section { padding: 100px 80px; }
+    .hero-inner, .welcome, .empathy > *, .stakes-inner, .authority > *, .hospital > *, .value > *, .financing-inner, .plan > *, .testimonials > *, .faq > *, .location > *, .final-cta-inner {
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .header-right { display: flex; align-items: center; gap: 10px; }
+  .lang-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--ink);
+    border: 1.5px solid var(--border);
+    padding: 7px 11px;
+    border-radius: 100px;
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    transition: all 0.2s;
+  }
+  .lang-switch:hover { border-color: var(--terra); color: var(--terra-deep); }
+  .lang-switch svg { width: 14px; height: 14px; }
+</style>
+<link rel="canonical" href="https://giancabariatrics.com/en/gastric-sleeve">
+<link rel="icon" href="../imagenes/logo.png">
+<script>try{if('IntersectionObserver'in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('anim-on')}catch(e){}</script>
+<style>
+/* === Animaciones al hacer scroll === */
+.anim-on .rv{opacity:0;transform:translateY(26px);transition:opacity .75s cubic-bezier(.2,.7,.2,1),transform .75s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.anim-on .rv.in{opacity:1;transform:none}
+.anim-on .hero-inner>*,.anim-on .doc-hero-inner>*{animation:heroIn .9s cubic-bezier(.2,.7,.2,1) both}
+.anim-on .hero-inner>*:nth-child(2),.anim-on .doc-hero-inner>*:nth-child(2){animation-delay:.12s}
+.anim-on .hero-inner>*:nth-child(3),.anim-on .doc-hero-inner>*:nth-child(3){animation-delay:.24s}
+.anim-on .hero-inner>*:nth-child(4){animation-delay:.36s}
+.anim-on .hero-inner>*:nth-child(5){animation-delay:.48s}
+@keyframes heroIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.hero-trust-num{font-variant-numeric:tabular-nums}
+.anim-on .hospital-photo.rv{transform:scale(.96)}
+.anim-on .hospital-photo.rv.in{transform:none}
+</style>
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','915021901361829');fbq('track','PageView');
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="wa.me"]');if(a)fbq('track','Contact');});
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=915021901361829&ev=PageView&noscript=1"/></noscript>
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar">Tijuana, Zona Río · <span>Bilingual care</span></div>
+
+<!-- Header -->
+<header>
+  <div class="brand">
+    <!-- LOGO: usa la versión del logo para fondo claro -->
+    <a href="./"><img src="../imagenes/logo.png" alt="Gianca Bariatrics" class="brand-logo"></a>
+  </div>
+  <div class="header-right">
+    <a href="../manga-gastrica" class="lang-switch" hreflang="es" lang="es" aria-label="Ver en español"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>ES</a>
+  <a href="https://wa.me/526633142454?text=Hi%20Dr.%20Giancarlo%2C%20I%27d%20like%20to%20book%20a%20free%20consultation.%20Could%20you%20share%20your%20available%20times%3F" class="header-cta">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+    WhatsApp
+  </a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">Certified by the Mexican Board of General Surgery</div>
+    <h1>Your new life <em>starts today.</em></h1>
+    <p class="hero-sub">More energy, more confidence and the freedom to get back to what your weight took from you. Book your free consultation and let's get started.</p>
+    <a href="https://wa.me/526633142454?text=Hi%20Dr.%20Giancarlo%2C%20I%27d%20like%20to%20book%20a%20free%20consultation.%20Could%20you%20share%20your%20available%20times%3F" class="hero-cta">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+      Book your free consultation
+    </a>
+    <div class="hero-trust">
+      <div class="hero-trust-item">
+        <span class="hero-trust-num">+500</span>
+        <span class="hero-trust-label">Surgeries performed</span>
+      </div>
+      <div class="hero-trust-item">
+        <span class="hero-trust-num">+33,000</span>
+        <span class="hero-trust-label">Pounds lost</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Beneficios -->
+<div class="welcome">
+  <div class="perks">
+    <span class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Free consultation</span>
+    <span class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>Financing available</span>
+    <span class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Care in English and Spanish</span>
+  </div>
+</div>
+
+<!-- Empathy -->
+<section class="empathy">
+  <div class="section-label">We understand</div>
+  <h2 class="section-title">You deserve to <em>feel good in your body.</em></h2>
+  <p>Your weight doesn't define your willpower. Your body has its own biology, and sometimes it needs extra help to get where you want to go.</p>
+  <div class="empathy-quote">
+    Deciding to take care of yourself is one of the bravest things you can do.
+  </div>
+</section>
+
+<!-- Stakes -->
+<section class="stakes">
+  <div class="stakes-inner">
+    <div class="section-label">Your change</div>
+    <h2 class="section-title">What <em>you gain</em> when you decide to change.</h2>
+    <p class="stakes-intro">It's not just about weight. It's about everything that comes with feeling good.</p>
+    <ul class="stakes-list">
+      <li class="stakes-item">
+        <span class="stakes-num">01</span>
+        <span class="stakes-text"><strong>Your health back.</strong> Improve your blood sugar, blood pressure and sleep so you feel good on the inside.</span>
+      </li>
+      <li class="stakes-item">
+        <span class="stakes-num">02</span>
+        <span class="stakes-text"><strong>Move without pain.</strong> Less weight on your knees and back, more freedom to enjoy life.</span>
+      </li>
+      <li class="stakes-item">
+        <span class="stakes-num">03</span>
+        <span class="stakes-text"><strong>Confidence in yourself.</strong> See yourself in the mirror and in photos with pride.</span>
+      </li>
+      <li class="stakes-item">
+        <span class="stakes-num">04</span>
+        <span class="stakes-text"><strong>More years with your loved ones.</strong> Be present for the moments that matter.</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- Mid CTA -->
+<section class="mid-cta">
+  <p>You don't have to decide today. All you have to do is <strong>talk</strong>.</p>
+  <a href="https://wa.me/526633142454?text=Hi%20Dr.%20Giancarlo%2C%20I%27d%20like%20to%20book%20a%20free%20consultation.%20Could%20you%20share%20your%20available%20times%3F" class="btn-wa">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+    Book my consultation
+  </a>
+</section>
+
+<!-- Authority -->
+<section class="authority">
+  <div class="section-label">About the surgeon</div>
+  <h2 class="section-title">Decide with the peace of mind of <em>knowing what to expect.</em></h2>
+  <p class="section-sub">It's normal to have questions before taking this step. My job starts with answering them.</p>
+
+  <div class="authority-card">
+    <!-- FOTO DEL DOCTOR: reemplaza la URL dentro de url('...') -->
+    <div class="authority-photo" style="background: url('../imagenes/doctor.jpg') center center/cover;"></div>
+    <div class="authority-body">
+      <div class="authority-name">Dr. Giancarlo Lizárraga</div>
+      <div class="authority-title">General and bariatric surgeon</div>
+      <p class="authority-text">I'm Dr. Giancarlo Lizárraga, a general and bariatric surgeon. In your consultation, I'll clearly explain what to expect, how your daily life will change and which option is best for you.</p>
+      <ul class="authority-creds">
+        <li>Certified by the Mexican Board of General Surgery</li>
+        <li>500+ bariatric surgeries performed</li>
+        <li>Bilingual care (English / Spanish)</li>
+        <li>Personal follow-up after your surgery</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Hospital Gallery -->
+<section class="hospital">
+  <div class="section-label">Where we operate</div>
+  <h2 class="section-title">So you can focus only <em>on your change.</em></h2>
+  <p class="section-sub">Your surgery takes place in a certified hospital, with fully equipped operating rooms and a team that cares for you every step of the way.</p>
+
+  <!-- FOTOS DE QUIRÓFANO: reemplaza cada URL dentro de url('...') y ajusta el texto del <span> -->
+  <div class="hospital-grid">
+    <div class="hospital-photo" style="background: url('../imagenes/hospital-fachada.jpg') center/cover;">
+      <span>Hospital exterior</span>
+    </div>
+    <div class="hospital-photo" style="background: url('../imagenes/quirofano.jpg') center/cover;">
+      <span>Operating room</span>
+    </div>
+    <div class="hospital-photo" style="background: url('../imagenes/lobby.jpg') center/cover;">
+      <span>Hospital lobby</span>
+    </div>
+    <div class="hospital-photo" style="background: url('../imagenes/equipo-medico.jpg') center/cover;">
+      <span>Medical team</span>
+    </div>
+  </div>
+
+  <div class="hospital-note">
+    While you focus on your new life, we take care of everything else.
+  </div>
+</section>
+
+<!-- Value Proposition -->
+<section class="value">
+  <div class="section-label">What's included</div>
+  <h2 class="section-title">Everything you need <em>to start your change.</em></h2>
+  <p class="section-sub">It's not just the surgery. It's the whole journey: from your consultation to your recovery.</p>
+
+  <div class="value-grid">
+    <div class="value-item">
+      <div class="value-item-title">Free consultation</div>
+      <div class="value-item-desc">We get to know your story and your goals so we can find the best path together.</div>
+    </div>
+    <div class="value-item">
+      <div class="value-item-title">Your surgery</div>
+      <div class="value-item-desc">In a certified hospital, with a team that cares for you from start to finish.</div>
+    </div>
+    <div class="value-item">
+      <div class="value-item-title">Follow-up after your surgery</div>
+      <div class="value-item-desc">We support you through your recovery so your change lasts.</div>
+    </div>
+    <div class="value-item">
+      <div class="value-item-title">Personal care</div>
+      <div class="value-item-desc">We answer your questions on WhatsApp, directly and personally.</div>
+    </div>
+  </div>
+</section>
+
+<!-- Financing -->
+<section class="financing">
+  <div class="financing-inner">
+    <div class="financing-label">Financing</div>
+    <h3>Don't let money <em>stop your change.</em></h3>
+    <div class="financing-amount">
+      <span class="financing-from">Monthly payments from</span>
+    </div>
+    <div class="financing-amount" style="margin-top: -8px;">
+      <span class="financing-num">$199</span>
+      <span class="financing-currency">USD</span>
+    </div>
+    <div class="financing-period">per month — based on your personalized plan</div>
+    <div class="financing-note">
+      In your consultation we review terms, down payment and requirements together to design a plan that works for you.
+    </div>
+    <a href="https://wa.me/526633142454?text=Hi%20Dr.%20Giancarlo%2C%20I%27d%20like%20to%20book%20a%20free%20consultation.%20Could%20you%20share%20your%20available%20times%3F" class="btn-primary">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      Learn about my personalized plan
+    </a>
+  </div>
+</section>
+
+<!-- Plan -->
+<section class="plan">
+  <div class="section-label">The plan</div>
+  <h2 class="section-title">Your change in <em>3 steps.</em></h2>
+  <p class="section-sub">Getting started is this simple.</p>
+
+  <div class="plan-steps">
+    <div class="plan-step">
+      <div class="plan-step-num">1</div>
+      <div class="plan-step-body">
+        <div class="plan-step-title">Book your consultation</div>
+        <div class="plan-step-desc">Message us on WhatsApp and we'll pick a day. It can be in person or by video call if you live outside Tijuana.</div>
+      </div>
+    </div>
+    <div class="plan-step">
+      <div class="plan-step-num">2</div>
+      <div class="plan-step-body">
+        <div class="plan-step-title">We design your plan</div>
+        <div class="plan-step-desc">We get to know your case and build the medical and payment plan that fits you best, together.</div>
+      </div>
+    </div>
+    <div class="plan-step">
+      <div class="plan-step-num">3</div>
+      <div class="plan-step-body">
+        <div class="plan-step-title">Start your new life</div>
+        <div class="plan-step-desc">Your surgery in a certified hospital and our support during your recovery, so the change stays with you.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonios -->
+<section class="testimonials">
+  <div class="section-label">Patients</div>
+  <h2 class="section-title">Hear from <em>those who've done it.</em></h2>
+  <p class="section-sub">Real testimonials from patients in Tijuana (translated from Spanish).</p>
+
+  <div class="testimonial">
+    <p class="testimonial-text">Dr. Giancarlo supported me throughout my weight-loss journey. I had a lot of questions and fears about the treatment, but he made me feel confident during all of my care. The results were amazing, with no complications at all. I recommend him 100%.</p>
+    <div class="testimonial-author">
+      <div class="testimonial-avatar">P</div>
+      <div>
+        <div class="testimonial-name">Paulina Mendoza</div>
+        <div class="testimonial-meta">Tijuana · ★★★★★</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial">
+    <p class="testimonial-text">Dr. Giancarlo explained everything patiently, with no pressure. I feel like myself again. Most importantly: the trust that comes from knowing he's personally looking out for you before and after surgery.</p>
+    <div class="testimonial-author">
+      <div class="testimonial-avatar">M</div>
+      <div>
+        <div class="testimonial-name">María O.</div>
+        <div class="testimonial-meta">Tijuana · ★★★★★</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="section-label">FAQ</div>
+  <h2 class="section-title">What <em>everyone</em> asks.</h2>
+
+  <details class="faq-item">
+    <summary class="faq-q">Am I a candidate for the gastric sleeve?</summary>
+    <div class="faq-a">If your weight is affecting your health or your quality of life, you likely are. In your consultation we review your case and tell you which path is best for you.</div>
+  </details>
+
+  <details class="faq-item">
+    <summary class="faq-q">How much does it cost?</summary>
+    <div class="faq-a">It depends on your case. In your consultation we give you the exact price, and we offer monthly payments from $199 USD so cost doesn't stop your change.</div>
+  </details>
+
+  <details class="faq-item">
+    <summary class="faq-q">Is it safe?</summary>
+    <div class="faq-a">It's one of the most performed bariatric procedures in the world. It's done in a certified hospital, and in your consultation we answer every question so you can decide with peace of mind.</div>
+  </details>
+
+  <details class="faq-item">
+    <summary class="faq-q">How soon can I get back to normal life?</summary>
+    <div class="faq-a">Most patients return to light activities in 7 to 10 days and to their routine in 3 to 4 weeks. From there, the change becomes more noticeable every week.</div>
+  </details>
+
+  <details class="faq-item">
+    <summary class="faq-q">Do you accept health insurance?</summary>
+    <div class="faq-a">We have agreements with insurance companies. Send us the name of your insurer and we'll let you know if it applies to your case.</div>
+  </details>
+
+  <details class="faq-item">
+    <summary class="faq-q">I live in the U.S. Can you treat me?</summary>
+    <div class="faq-a">Yes. Many patients come from San Diego and other cities. You can have your consultation by video call, and we'll help you plan your visit to Tijuana.</div>
+  </details>
+
+  <details class="faq-item">
+    <summary class="faq-q">How do I book my consultation?</summary>
+    <div class="faq-a">Message us on WhatsApp or email us at <a href="mailto:drgiancarlolizarraga@gmail.com" style="color: var(--terra-deep); font-weight: 600;">drgiancarlolizarraga@gmail.com</a>. Your consultation is free.</div>
+  </details>
+
+</section>
+
+<!-- Location -->
+<section class="location">
+  <div class="section-label">Where to find us</div>
+  <h2 class="section-title">We'll see you in <em>Zona Río.</em></h2>
+  <div class="location-card">
+    <div class="location-place">Hospital Blue</div>
+    <div class="location-room">Office 917</div>
+    <p class="location-address">Vía Rápida Oriente 9750, Zona Urbana Río, Tijuana, B.C.</p>
+    <a href="https://maps.app.goo.gl/Tp65EmCH6TERQF3W7" target="_blank" rel="noopener" class="btn-map">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+      Get directions
+    </a>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final-cta">
+  <div class="final-cta-inner">
+    <h2>The first step <em>isn't surgery.</em><br>It's this conversation.</h2>
+    <p>Book your free consultation and we'll answer every question you have. No pressure, no commitment.</p>
+    <a href="https://wa.me/526633142454?text=Hi%20Dr.%20Giancarlo%2C%20I%27d%20like%20to%20book%20a%20free%20consultation.%20Could%20you%20share%20your%20available%20times%3F" class="btn-wa">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+      Talk to Dr. Giancarlo
+    </a>
+    <p class="response-time">We'll get back to you as soon as possible.</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <img src="../imagenes/logo.png" alt="Gianca Bariatrics" style="height: 90px; width: auto; margin: 0 auto 18px; display: block;">
+  Dr. Giancarlo Lizárraga · Zona Río, Tijuana<br>
+  <a href="mailto:drgiancarlolizarraga@gmail.com" style="color: var(--blue-strong); font-weight: 600;">drgiancarlolizarraga@gmail.com</a><br>
+  General and bariatric surgeon · Certified by the Mexican Board of General Surgery
+  <div class="footer-links">
+    <a href="./">Home</a>
+    <a href="privacy-policy">Privacy policy</a>
+    <a href="https://wa.me/526633142454?text=Hi%20Dr.%20Giancarlo%2C%20I%27d%20like%20to%20book%20a%20free%20consultation.%20Could%20you%20share%20your%20available%20times%3F">Contact</a>
+  </div>
+  <p class="footer-copy">© 2026 Gianca Bariatrics. All rights reserved.</p>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/526633142454?text=Hi%20Dr.%20Giancarlo%2C%20I%27d%20like%20to%20book%20a%20free%20consultation.%20Could%20you%20share%20your%20available%20times%3F" class="float-wa">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+  WhatsApp
+</a>
+
+<script>
+(function(){
+  if(!document.documentElement.classList.contains('anim-on'))return;
+  var sel='.section-label,.section-title,.section-sub,.why-intro,.stakes-intro,.service-card,.calc-card,.doctor-card,.authority-card,.why-item,.testimonial,.faq-item,.location-card,.stakes-item,.plan-step,.value-item,.hospital-photo,.hospital-note,.empathy>p,.empathy-quote,.financing-label,.financing h3,.financing-amount,.financing-period,.financing-note,.mid-cta p,.final-cta h2,.final-cta-inner>p:not(.response-time),.perk';
+  var stag='service-card why-item testimonial faq-item stakes-item plan-step value-item hospital-photo perk'.split(' ');
+  var els=[].slice.call(document.querySelectorAll(sel));
+  els.forEach(function(el){
+    el.classList.add('rv');
+    for(var i=0;i<stag.length;i++){if(el.classList.contains(stag[i])){
+      var sib=[].filter.call(el.parentNode.children,function(c){return c.classList.contains(stag[i])});
+      el.style.setProperty('--d',(Math.min(sib.indexOf(el),5)*0.09)+'s');break;}}
+  });
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){io.observe(el)});
+  document.querySelectorAll('.hero-trust-num').forEach(function(n){
+    var txt=n.textContent.trim(),m=txt.match(/^(\D*)([\d,]+)(\D*)$/);if(!m)return;
+    var end=parseInt(m[2].replace(/,/g,''),10),t0=null,dur=1600;
+    n.textContent=m[1]+'0'+m[3];
+    function step(t){if(!t0)t0=t;var p=Math.min((t-t0)/dur,1),v=Math.round(end*(1-Math.pow(1-p,3)));
+      n.textContent=m[1]+v.toLocaleString('en-US')+m[3];if(p<1)requestAnimationFrame(step);}
+    setTimeout(function(){requestAnimationFrame(step)},500);
+  });
+})();
+</script>
+</body>
+</html>

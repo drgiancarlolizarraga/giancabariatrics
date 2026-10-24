@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gianca Bariatrics — Cirugía Bariátrica en Tijuana | Dr. Giancarlo Lizárraga</title>
+<link rel="alternate" hreflang="es" href="https://giancabariatrics.com/">
+<link rel="alternate" hreflang="en" href="https://giancabariatrics.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://giancabariatrics.com/">
+
+<meta name="description" content="Cirujano bariátrico en Tijuana, certificado por el Consejo Mexicano de Cirugía General. Manga gástrica, GLP-1, cirugía general. Atención personalizada y +500 cirugías realizadas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=DM+Sans:wght@400;500;600;700&family=Fraunces:ital,wght@0,400;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  /* ============================================================
+     PALETA GIANCA BARIATRICS (oct 2026)
+     Azul claro = fondo principal · Terracota = acentos y botones
+     ============================================================ */
+  :root {
+    --blue: #BBCFF4;
+    --blue-soft: #DCE6FA;
+    --blue-mist: #EEF3FC;
+    --blue-deep: #5F7FC4;
+    --blue-strong: #4A68AD;
+
+    --terra: #BF7349;
+    --terra-deep: #BF7349;
+    --terra-hover: #A35B35;
+    --terra-text: #A35B35;   /* solo etiquetas pequeñas, para que se lean */
+    --sand: #D7A781;
+    --sand-soft: #F7EEE5;
+
+    --white: #FFFFFF;
+    --ink: #22304F;
+    --text: #2C3958;
+    --text-soft: #4D5A75;
+    --text-muted: #6E7A93;
+    --border: rgba(34, 48, 79, 0.10);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+    background: var(--blue-mist);
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+  img { max-width: 100%; display: block; }
+  a { text-decoration: none; color: inherit; }
+
+  /* === Top Bar === */
+  .topbar {
+    background: var(--blue-strong);
+    color: rgba(255,255,255,0.9);
+    text-align: center;
+    padding: 10px 16px;
+    font-size: 11.5px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .topbar span { color: #fff; font-weight: 700; }
+
+  /* === Header === */
+  header {
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 12px 20px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .brand { display: flex; align-items: center; gap: 11px; }
+  .brand-logo { height: 60px; width: auto; display: block; }
+  .header-cta {
+    background: var(--terra-deep);
+    color: white;
+    padding: 9px 14px;
+    border-radius: 100px;
+    font-size: 12.5px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+  }
+  .header-cta:hover { background: var(--terra-hover); transform: translateY(-1px); }
+  .header-cta svg { width: 14px; height: 14px; }
+
+  /* === Hero === */
+  .hero {
+    background: linear-gradient(180deg, var(--blue-soft) 0%, var(--blue) 100%);
+    color: var(--ink);
+    padding: 60px 24px 70px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: -35%; right: -40%;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(255,255,255,0.65) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    bottom: -50%; left: -30%;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(215, 167, 129, 0.22) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .hero-inner { position: relative; z-index: 2; }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.7);
+    border: 1px solid rgba(191, 115, 73, 0.25);
+    color: var(--terra-text);
+    padding: 7px 13px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+  }
+  .hero-badge::before {
+    content: "";
+    width: 6px; height: 6px;
+    background: var(--terra);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+  .hero h1 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    font-size: clamp(36px, 9vw, 60px);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    margin-bottom: 18px;
+    color: var(--ink);
+  }
+  .hero h1 em {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--terra-deep);
+  }
+  .hero-sub {
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--text-soft);
+    margin-bottom: 32px;
+    max-width: 540px;
+  }
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--terra-deep);
+    color: white;
+    padding: 16px 28px;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: -0.01em;
+    box-shadow: 0 8px 24px rgba(191, 115, 73, 0.30);
+    transition: all 0.25s;
+  }
+  .hero-cta:hover {
+    background: var(--terra-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(191, 115, 73, 0.40);
+  }
+  .hero-cta svg { width: 18px; height: 18px; }
+
+  .hero-trust {
+    display: flex;
+    gap: 24px;
+    margin-top: 36px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(34, 48, 79, 0.12);
+    flex-wrap: wrap;
+  }
+  .hero-trust-item { display: flex; flex-direction: column; }
+  .hero-trust-num {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 26px;
+    color: var(--terra-deep);
+    line-height: 1;
+  }
+  .hero-trust-label {
+    font-size: 11px;
+    color: var(--text-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 5px;
+    font-weight: 600;
+  }
+
+  /* === Section base === */
+  section { padding: 70px 24px; }
+  .section-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--terra-text);
+    margin-bottom: 14px;
+  }
+  .section-label::before { content: "—"; margin-right: 8px; }
+  h2.section-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: clamp(28px, 7vw, 40px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 18px;
+  }
+  h2.section-title em {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--terra-deep);
+  }
+  .section-sub {
+    font-size: 16px;
+    color: var(--text-soft);
+    line-height: 1.6;
+    margin-bottom: 36px;
+    max-width: 600px;
+  }
+
+  /* === Services === */
+  .services { background: white; }
+  .service-grid { display: grid; gap: 18px; margin-top: 36px; }
+  .service-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s;
+    position: relative;
+  }
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(34, 48, 79, 0.10);
+    border-color: var(--sand);
+  }
+  .service-image {
+    height: 200px;
+    background: linear-gradient(135deg, var(--blue-soft), var(--blue-deep));
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding: 18px 20px;
+  }
+  .service-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(255,255,255,0.35) 0%, transparent 60%);
+  }
+  .service-image::after {
+    content: "";
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 55%;
+    background: linear-gradient(180deg, transparent, rgba(34, 48, 79, 0.55));
+  }
+  .service-icon {
+    position: absolute;
+    top: 24px; right: 24px;
+    width: 48px; height: 48px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--terra-deep);
+    z-index: 2;
+  }
+  .service-icon svg { width: 22px; height: 22px; }
+  .service-tag {
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+  .service-body { padding: 28px 24px; }
+  .service-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    color: var(--ink);
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+  }
+  .service-title em {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--terra-deep);
+  }
+  .service-desc {
+    font-size: 15px;
+    color: var(--text-soft);
+    line-height: 1.6;
+    margin-bottom: 18px;
+  }
+  .service-features { list-style: none; margin-bottom: 24px; }
+  .service-features li {
+    padding: 7px 0;
+    border-top: 1px solid var(--border);
+    font-size: 13.5px;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .service-features li::before {
+    content: "";
+    width: 5px; height: 5px;
+    background: var(--terra);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .service-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--terra-deep);
+    font-weight: 700;
+    font-size: 14px;
+    padding: 12px 20px;
+    border: 2px solid var(--terra-deep);
+    border-radius: 100px;
+    transition: all 0.2s;
+  }
+  .service-cta:hover { background: var(--terra-deep); color: white; }
+  .service-cta svg { width: 14px; height: 14px; }
+
+  .service-card.featured {
+    border: 1px solid var(--sand);
+    box-shadow: 0 8px 24px rgba(191, 115, 73, 0.12);
+  }
+  .service-card.featured .service-cta {
+    background: var(--terra-deep);
+    color: white;
+    border-color: var(--terra-deep);
+  }
+  .service-card.featured .service-cta:hover {
+    background: var(--terra-hover);
+    border-color: var(--terra-hover);
+  }
+  .badge-popular {
+    position: absolute;
+    top: 16px; left: 16px;
+    background: var(--terra-deep);
+    color: white;
+    padding: 5px 11px;
+    border-radius: 100px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    z-index: 3;
+  }
+
+  /* === Calculadora IMC === */
+  .calc { background: var(--blue-soft); }
+  .calc-card {
+    background: white;
+    border-radius: 8px;
+    padding: 28px 24px;
+    margin-top: 28px;
+    box-shadow: 0 2px 10px rgba(34, 48, 79, 0.07);
+  }
+  .calc-units {
+    display: inline-flex;
+    background: var(--blue-mist);
+    border-radius: 100px;
+    padding: 4px;
+    margin-bottom: 22px;
+  }
+  .calc-units button {
+    border: 0;
+    background: transparent;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-soft);
+    padding: 8px 16px;
+    border-radius: 100px;
+    cursor: pointer;
+  }
+  .calc-units button.active { background: white; color: var(--ink); box-shadow: 0 1px 3px rgba(34,48,79,0.12); }
+  .calc-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 20px; }
+  .calc-field label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-soft);
+    margin-bottom: 6px;
+  }
+  .calc-field input {
+    width: 100%;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--ink);
+    padding: 12px 14px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    background: var(--blue-mist);
+    outline: none;
+    -moz-appearance: textfield;
+  }
+  .calc-field input:focus { border-color: var(--terra); background: white; }
+  .calc-field input::-webkit-outer-spin-button,
+  .calc-field input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+  .calc-btn {
+    width: 100%;
+    border: 0;
+    cursor: pointer;
+    background: var(--terra-deep);
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 15px;
+    border-radius: 100px;
+    transition: background 0.2s;
+  }
+  .calc-btn:hover { background: var(--terra-hover); }
+  .calc-error { color: var(--terra-hover); font-size: 13.5px; margin-top: 10px; display: none; }
+  .calc-result {
+    display: none;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+  }
+  .calc-result.show { display: block; animation: fadeIn 0.35s ease; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  .calc-bmi { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
+  .calc-bmi-num {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 1;
+    color: var(--terra-deep);
+  }
+  .calc-bmi-label { font-size: 13px; font-weight: 600; color: var(--text-soft); text-transform: uppercase; letter-spacing: 0.08em; }
+  .calc-cat { font-size: 15px; color: var(--text); margin-bottom: 18px; }
+  .calc-reco {
+    background: var(--sand-soft);
+    border-left: 3px solid var(--terra);
+    border-radius: 6px;
+    padding: 18px;
+    margin-bottom: 20px;
+  }
+  .calc-reco-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 19px;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+  .calc-reco-text { font-size: 14.5px; color: var(--text-soft); line-height: 1.55; }
+  .calc-note { font-size: 12px; color: var(--text-muted); margin-top: 16px; line-height: 1.5; }
+
+  /* === About Doctor === */
+  .about-doctor { background: var(--blue-mist); }
+  .doctor-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 28px;
+    box-shadow: 0 2px 10px rgba(34, 48, 79, 0.07);
+  }
+  .doctor-photo {
+    /* FOTO DEL DOCTOR: reemplaza la URL dentro de url('...') */
+    background: url('imagenes/doctor.jpg') center center/cover, linear-gradient(135deg, var(--blue-soft), var(--blue));
+    aspect-ratio: 4 / 5;
+    width: 100%;
+  }
+  .doctor-body { padding: 32px 24px; }
+  .doctor-name {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 26px;
+    color: var(--ink);
+    line-height: 1.1;
+    margin-bottom: 6px;
+  }
+  .doctor-title {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--terra-deep);
+    margin-bottom: 18px;
+  }
+  .doctor-body p {
+    font-size: 15px;
+    color: var(--text-soft);
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+  .doctor-creds { list-style: none; margin-top: 20px; }
+  .doctor-creds li {
+    padding: 12px 0;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--text);
+    font-weight: 500;
+  }
+  .doctor-creds li::before {
+    content: "";
+    width: 6px; height: 6px;
+    background: var(--terra);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* === Why Us === */
+  .why { background: var(--blue); color: var(--ink); position: relative; overflow: hidden; }
+  .why::before {
+    content: "";
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(255,255,255,0.5) 0%, transparent 70%);
+  }
+  .why > * { position: relative; z-index: 2; }
+  .why-intro { color: var(--text); font-size: 16px; line-height: 1.6; max-width: 600px; }
+  .why-grid { display: grid; gap: 16px; margin-top: 32px; }
+  .why-item {
+    background: rgba(255,255,255,0.75);
+    border: 1px solid rgba(255,255,255,0.9);
+    border-radius: 8px;
+    padding: 24px;
+  }
+  .why-item-num {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 28px;
+    color: var(--terra-deep);
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+  .why-item-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--ink);
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  .why-item-desc { font-size: 14px; color: var(--text-soft); line-height: 1.55; }
+
+  /* === Testimonials === */
+  .testimonials { background: white; }
+  .testimonial {
+    background: var(--sand-soft);
+    border-radius: 8px;
+    padding: 28px 24px;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .testimonial::before {
+    content: "“";
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 64px;
+    color: var(--terra);
+    position: absolute;
+    top: 6px; left: 18px;
+    line-height: 1;
+    opacity: 0.35;
+  }
+  .testimonial-text {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--ink);
+    margin-bottom: 18px;
+    position: relative;
+    z-index: 1;
+    padding-top: 8px;
+  }
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(191, 115, 73, 0.15);
+  }
+  .testimonial-avatar {
+    width: 42px; height: 42px;
+    background: var(--blue);
+    color: var(--ink);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+  }
+  .testimonial-name {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 14.5px;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+  .testimonial-meta { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+
+  /* === FAQ === */
+  .faq { background: white; }
+  .faq-list { margin-top: 28px; }
+  .faq-item {
+    background: var(--blue-mist);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .faq-q {
+    padding: 18px 50px 18px 20px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 15.5px;
+    color: var(--ink);
+    cursor: pointer;
+    position: relative;
+    list-style: none;
+    line-height: 1.35;
+  }
+  .faq-q::-webkit-details-marker { display: none; }
+  .faq-q::after {
+    content: "+";
+    position: absolute;
+    right: 20px; top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Fraunces', serif;
+    font-size: 24px;
+    color: var(--terra-deep);
+    transition: transform 0.25s;
+  }
+  details[open] .faq-q::after { transform: translateY(-50%) rotate(45deg); }
+  .faq-a { padding: 0 20px 20px; font-size: 14.5px; color: var(--text-soft); line-height: 1.6; }
+
+  /* === Location === */
+  .location { background: var(--blue-mist); }
+  .location-card {
+    background: white;
+    border-radius: 8px;
+    padding: 28px 24px;
+    margin-top: 28px;
+    box-shadow: 0 2px 10px rgba(34, 48, 79, 0.07);
+    border-left: 3px solid var(--terra);
+  }
+  .location-place {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    color: var(--ink);
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+  .location-room {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--terra-deep);
+    margin-bottom: 14px;
+  }
+  .location-address { font-size: 15px; color: var(--text); line-height: 1.6; margin-bottom: 24px; }
+  .location-hint { font-size: 14px; color: var(--text-soft); line-height: 1.55; margin-bottom: 24px; }
+  .btn-map {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    color: var(--terra-deep);
+    border: 2px solid var(--terra-deep);
+    padding: 13px 22px;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 14.5px;
+    transition: all 0.2s;
+  }
+  .btn-map:hover { background: var(--terra-deep); color: white; }
+  .btn-map svg { width: 18px; height: 18px; }
+
+  /* === Final CTA === */
+  .final-cta {
+    background: linear-gradient(180deg, var(--blue) 0%, var(--blue-soft) 100%);
+    color: var(--ink);
+    padding: 70px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .final-cta::before {
+    content: "";
+    position: absolute;
+    top: -30%; left: -30%;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(255,255,255,0.55) 0%, transparent 60%);
+  }
+  .final-cta::after {
+    content: "";
+    position: absolute;
+    bottom: -40%; right: -30%;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(215, 167, 129, 0.25) 0%, transparent 60%);
+  }
+  .final-cta-inner { position: relative; z-index: 2; }
+  .final-cta h2 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    font-size: clamp(30px, 8vw, 44px);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    margin-bottom: 16px;
+    color: var(--ink);
+  }
+  .final-cta h2 em {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--terra-deep);
+  }
+  .final-cta p {
+    font-size: 16px;
+    color: var(--text-soft);
+    line-height: 1.55;
+    margin: 0 auto 32px;
+    max-width: 460px;
+  }
+  .final-cta .response-time { margin-top: 24px; margin-bottom: 0; font-size: 13px; color: var(--text-muted); }
+
+  .btn-wa {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--terra-deep);
+    color: white;
+    padding: 16px 28px;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: -0.01em;
+    box-shadow: 0 6px 18px rgba(191, 115, 73, 0.28);
+    transition: all 0.25s;
+  }
+  .btn-wa:hover {
+    background: var(--terra-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(191, 115, 73, 0.38);
+  }
+  .btn-wa svg { width: 18px; height: 18px; }
+
+  /* === Footer === */
+  footer {
+    background: var(--white);
+    color: var(--text-soft);
+    padding: 36px 24px 100px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.7;
+    border-top: 3px solid var(--blue);
+  }
+  footer img { height: 90px; margin: 0 auto 18px; display: block; }
+  .footer-links {
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    font-size: 12px;
+  }
+  .footer-links a { color: var(--blue-strong); font-weight: 600; }
+  .footer-copy { margin-top: 18px; font-size: 11px; color: var(--text-muted); }
+
+  /* === Floating WhatsApp === */
+  .float-wa {
+    position: fixed;
+    bottom: 20px; right: 20px;
+    background: var(--terra-deep);
+    color: white;
+    padding: 14px 20px 14px 16px;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 8px 24px rgba(191, 115, 73, 0.40);
+    z-index: 99;
+    transition: all 0.25s;
+  }
+  .float-wa:hover { background: var(--terra-hover); transform: translateY(-2px); }
+  .float-wa svg { width: 22px; height: 22px; }
+
+  /* === Responsive === */
+  @media (min-width: 720px) {
+    .hero { padding: 90px 48px 100px; }
+    section { padding: 90px 48px; }
+    .service-grid { grid-template-columns: 1fr 1fr; }
+    .why-grid { display: flex; flex-wrap: wrap; justify-content: center; }
+    .why-item { flex: 0 0 calc(50% - 8px); }
+    .doctor-card { display: grid; grid-template-columns: 1fr 1.3fr; align-items: stretch; }
+    .doctor-photo { aspect-ratio: auto; height: 100%; min-height: 480px; }
+  }
+  @media (min-width: 960px) {
+    .section-label { display: block; }
+    .hero { padding: 110px 80px 130px; }
+    section { padding: 110px 80px; }
+    .hero-inner, .services > *, .calc > *, .about-doctor > *, .why > *, .testimonials > *, .faq > *, .location > *, .final-cta-inner {
+      max-width: 1080px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .service-grid { grid-template-columns: repeat(3, 1fr); max-width: 1080px; margin: 36px auto 0; }
+    .why-item { flex: 0 0 calc(33.333% - 11px); }
+  }
+
+  .header-right { display: flex; align-items: center; gap: 10px; }
+  .lang-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--ink);
+    border: 1.5px solid var(--border);
+    padding: 7px 11px;
+    border-radius: 100px;
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    transition: all 0.2s;
+  }
+  .lang-switch:hover { border-color: var(--terra); color: var(--terra-deep); }
+  .lang-switch svg { width: 14px; height: 14px; }
+</style>
+<link rel="canonical" href="https://giancabariatrics.com/">
+<link rel="icon" href="imagenes/logo.png">
+<script>try{if('IntersectionObserver'in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('anim-on')}catch(e){}</script>
+<style>
+/* === Animaciones al hacer scroll === */
+.anim-on .rv{opacity:0;transform:translateY(26px);transition:opacity .75s cubic-bezier(.2,.7,.2,1),transform .75s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.anim-on .rv.in{opacity:1;transform:none}
+.anim-on .hero-inner>*,.anim-on .doc-hero-inner>*{animation:heroIn .9s cubic-bezier(.2,.7,.2,1) both}
+.anim-on .hero-inner>*:nth-child(2),.anim-on .doc-hero-inner>*:nth-child(2){animation-delay:.12s}
+.anim-on .hero-inner>*:nth-child(3),.anim-on .doc-hero-inner>*:nth-child(3){animation-delay:.24s}
+.anim-on .hero-inner>*:nth-child(4){animation-delay:.36s}
+.anim-on .hero-inner>*:nth-child(5){animation-delay:.48s}
+@keyframes heroIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.hero-trust-num{font-variant-numeric:tabular-nums}
+.anim-on .hospital-photo.rv{transform:scale(.96)}
+.anim-on .hospital-photo.rv.in{transform:none}
+</style>
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','915021901361829');fbq('track','PageView');
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="wa.me"]');if(a)fbq('track','Contact');});
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=915021901361829&ev=PageView&noscript=1"/></noscript>
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar">Tijuana, Zona Río · <span>Atención bilingüe</span></div>
+
+<!-- Header -->
+<header>
+  <div class="brand">
+    <!-- LOGO: usa la versión del logo para fondo claro -->
+    <img src="imagenes/logo.png" alt="Gianca Bariatrics" class="brand-logo">
+  </div>
+  <div class="header-right">
+    <a href="en/" class="lang-switch" hreflang="en" lang="en" aria-label="View in English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>EN</a>
+  <a href="https://wa.me/526633142454?text=Hola%20Dr.%20Giancarlo%2C%20me%20gustar%C3%ADa%20agendar%20una%20valoraci%C3%B3n%20sin%20costo%2C%20me%20podr%C3%ADa%20dar%20los%20horarios%20disponibles%3F" class="header-cta">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+    WhatsApp
+  </a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">Certificado por el Consejo Mexicano de Cirugía General</div>
+    <h1>El cambio que llevas años buscando <em>sí es posible.</em></h1>
+    <p class="hero-sub">Soy el Dr. Giancarlo Lizárraga, cirujano bariatra en Tijuana. Desde tu valoración hasta tu recuperación, te brindo acompañamiento.</p>
+    <a href="https://wa.me/526633142454?text=Hola%20Dr.%20Giancarlo%2C%20me%20gustar%C3%ADa%20agendar%20una%20valoraci%C3%B3n%20sin%20costo%2C%20me%20podr%C3%ADa%20dar%20los%20horarios%20disponibles%3F" class="hero-cta">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+      Agendar valoración sin costo
+    </a>
+    <div class="hero-trust">
+      <div class="hero-trust-item">
+        <span class="hero-trust-num">+500</span>
+        <span class="hero-trust-label">Cirugías realizadas</span>
+      </div>
+      <div class="hero-trust-item">
+        <span class="hero-trust-num">+15,000</span>
+        <span class="hero-trust-label">Kilos perdidos</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="services">
+  <div class="section-label">Nuestros servicios</div>
+  <h2 class="section-title">Soluciones para cada <em>etapa</em> de tu camino.</h2>
+  <p class="section-sub">Cada cuerpo y cada historia son distintos. Por eso buscamos juntos el camino que mejor se adapte a ti: cirugía, tratamiento con medicamento o cirugía general.</p>
+
+  <div class="service-grid">
+
+    <!-- Servicio 1: Manga Gástrica
+         FOTO: agrega style="background: url('TU-URL') center/cover;" al div .service-image -->
+    <div class="service-card featured">
+      <div class="badge-popular">Más solicitado</div>
+      <div class="service-image">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L4 7v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V7l-8-5z"/></svg>
+        </div>
+        <span class="service-tag">Cirugía Bariátrica</span>
+      </div>
+      <div class="service-body">
+        <h3 class="service-title">Manga <em>gástrica</em></h3>
+        <p class="service-desc">El procedimiento bariátrico más realizado del mundo. También realizo bypass gástrico y mini-bypass cuando es la mejor opción para tu caso.</p>
+        <ul class="service-features">
+          <li>Procedimiento por laparoscopía</li>
+          <li>Hospital certificado</li>
+          <li>Seguimiento después de tu cirugía</li>
+          <li>También bypass y mini-bypass</li>
+        </ul>
+        <a href="manga-gastrica" class="service-cta">
+          Conocer más
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Servicio 2: GLP-1 -->
+    <div class="service-card">
+      <div class="service-image">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 11h-7V4a1 1 0 0 0-1-1H7.5L4 7v13a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1z"/><path d="M9 14h6M12 11v6"/></svg>
+        </div>
+        <span class="service-tag">Tratamiento médico</span>
+      </div>
+      <div class="service-body">
+        <h3 class="service-title">Pérdida de peso con <em>GLP-1</em></h3>
+        <p class="service-desc">Para pacientes que necesitan perder 10–15 kg de peso.</p>
+        <ul class="service-features">
+          <li>Sin cirugía</li>
+          <li>Seguimiento médico mensual</li>
+          <li>Disponible a nivel nacional</li>
+        </ul>
+        <a href="https://wa.me/526633142454?text=Hola%20Dr.%20Giancarlo%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20el%20tratamiento%20GLP-1%20para%20p%C3%A9rdida%20de%20peso." class="service-cta">
+          Conocer más
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Servicio 3: Cirugía General -->
+    <div class="service-card">
+      <div class="service-image">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <span class="service-tag">Cirugía General</span>
+      </div>
+      <div class="service-body">
+        <h3 class="service-title">Cirugía <em>general</em></h3>
+        <p class="service-desc">Procedimientos seguros y efectivos para condiciones comunes que requieren intervención quirúrgica.</p>
+        <ul class="service-features">
+          <li>Vesícula biliar (colecistectomía)</li>
+          <li>Hernias inguinales y umbilicales</li>
+          <li>Apendicitis</li>
+          <li>Cirugía laparoscópica</li>
+        </ul>
+        <a href="https://wa.me/526633142454?text=Hola%20Dr.%20Giancarlo%2C%20me%20interesa%20agendar%20una%20valoraci%C3%B3n%20de%20cirug%C3%ADa%20general." class="service-cta">
+          Conocer más
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Calculadora IMC -->
+<section class="calc" id="calculadora">
+  <div class="section-label">Calculadora</div>
+  <h2 class="section-title">Descubre qué camino <em>es para ti.</em></h2>
+  <p class="section-sub">Escribe tu peso y tu estatura. En segundos te decimos qué opción podría ayudarte a lograr tu cambio.</p>
+
+  <div class="calc-card">
+    <div class="calc-units" role="tablist">
+      <button type="button" class="active" data-unit="metric">kg / cm</button>
+      <button type="button" data-unit="imperial">lb / ft</button>
+    </div>
+
+    <div class="calc-fields" id="fields-metric">
+      <div class="calc-field">
+        <label for="peso-kg">Peso (kg)</label>
+        <input id="peso-kg" type="number" inputmode="decimal" min="30" max="350" placeholder="95">
+      </div>
+      <div class="calc-field">
+        <label for="talla-cm">Estatura (cm)</label>
+        <input id="talla-cm" type="number" inputmode="decimal" min="120" max="230" placeholder="165">
+      </div>
+    </div>
+
+    <div class="calc-fields" id="fields-imperial" style="display:none; grid-template-columns: 1fr 1fr 1fr;">
+      <div class="calc-field">
+        <label for="peso-lb">Peso (lb)</label>
+        <input id="peso-lb" type="number" inputmode="decimal" min="66" max="770" placeholder="210">
+      </div>
+      <div class="calc-field">
+        <label for="talla-ft">Pies</label>
+        <input id="talla-ft" type="number" inputmode="numeric" min="4" max="7" placeholder="5">
+      </div>
+      <div class="calc-field">
+        <label for="talla-in">Pulgadas</label>
+        <input id="talla-in" type="number" inputmode="numeric" min="0" max="11" placeholder="5">
+      </div>
+    </div>
+
+    <button type="button" class="calc-btn" id="calc-go">Calcular mi resultado</button>
+    <p class="calc-error" id="calc-error">Revisa que tu peso y estatura estén bien escritos.</p>
+
+    <div class="calc-result" id="calc-result" aria-live="polite">
+      <div class="calc-bmi">
+        <span class="calc-bmi-num" id="r-bmi">0</span>
+        <span class="calc-bmi-label">Tu IMC</span>
+      </div>
+      <p class="calc-cat" id="r-cat"></p>
+      <div class="calc-reco">
+        <div class="calc-reco-title" id="r-title"></div>
+        <div class="calc-reco-text" id="r-text"></div>
+      </div>
+      <a href="#" class="btn-wa" id="r-cta" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+        <span id="r-cta-text">Agendar mi valoración</span>
+      </a>
+      <p class="calc-note">Este resultado es orientativo y no sustituye una valoración médica. Tu caso lo revisamos a detalle en consulta.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var unit = 'metric';
+  var WA = 'https://wa.me/526633142454?text=';
+  var $ = function (id) { return document.getElementById(id); };
+
+  document.querySelectorAll('.calc-units button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      unit = b.getAttribute('data-unit');
+      document.querySelectorAll('.calc-units button').forEach(function (x) { x.classList.toggle('active', x === b); });
+      $('fields-metric').style.display = unit === 'metric' ? 'grid' : 'none';
+      $('fields-imperial').style.display = unit === 'imperial' ? 'grid' : 'none';
+    });
+  });
+
+  function num(id) { var v = parseFloat(($(id).value || '').replace(',', '.')); return isNaN(v) ? 0 : v; }
+
+  $('calc-go').addEventListener('click', function () {
+    var kg, m;
+    if (unit === 'metric') {
+      kg = num('peso-kg'); m = num('talla-cm') / 100;
+    } else {
+      kg = num('peso-lb') * 0.453592; m = (num('talla-ft') * 12 + num('talla-in')) * 0.0254;
+    }
+    if (kg < 30 || kg > 350 || m < 1.2 || m > 2.3) {
+      $('calc-error').style.display = 'block'; $('calc-result').classList.remove('show'); return;
+    }
+    $('calc-error').style.display = 'none';
+
+    var bmi = kg / (m * m);
+    var extra = kg - 25 * m * m;            /* kilos arriba del peso saludable (IMC 25) */
+    var cat, title, text, ruta;
+
+    if (bmi < 18.5) cat = 'Peso bajo';
+    else if (bmi < 25) cat = 'Peso saludable';
+    else if (bmi < 30) cat = 'Sobrepeso';
+    else if (bmi < 35) cat = 'Obesidad grado 1';
+    else if (bmi < 40) cat = 'Obesidad grado 2';
+    else cat = 'Obesidad grado 3';
+
+    if (bmi < 18.5) {
+      title = 'Tu peso está por debajo de lo recomendado';
+      text = 'En tu caso no buscamos bajar de peso. Si tienes dudas sobre tu salud, con gusto lo platicamos en consulta.';
+      ruta = 'una consulta';
+    } else if (bmi < 25) {
+      title = '¡Estás en un rango saludable!';
+      text = 'Tu peso está dentro de lo recomendado. Si quieres mejorar tu composición corporal o tienes alguna duda, platiquemos.';
+      ruta = 'una consulta';
+    } else if (extra <= 15 || bmi < 30) {
+      title = 'Podrías ser candidato a tratamiento con GLP-1';
+      text = 'Estás aproximadamente a ' + Math.max(1, Math.round(extra)) + ' kg de tu peso saludable. Un tratamiento con GLP-1 y seguimiento médico mensual puede ayudarte a llegar ahí, sin cirugía.';
+      ruta = 'tratamiento con GLP-1';
+    } else {
+      title = 'Podrías ser candidato a manga gástrica';
+      text = 'Estás aproximadamente a ' + Math.round(extra) + ' kg de tu peso saludable. La manga gástrica puede ser la herramienta que te ayude a lograr ese cambio y mantenerlo.';
+      ruta = 'manga gástrica';
+    }
+
+    var b = bmi.toFixed(1);
+    $('r-bmi').textContent = b;
+    $('r-cat').textContent = cat;
+    $('r-title').textContent = title;
+    $('r-text').textContent = text;
+    $('r-cta').href = WA + encodeURIComponent('Hola Dr. Giancarlo, usé la calculadora de su página. Mi IMC es ' + b + ' y me gustaría agendar una valoración sin costo para ' + ruta + '. ¿Me podría dar los horarios disponibles?');
+    $('calc-result').classList.add('show');
+    $('calc-result').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  });
+})();
+</script>
+
+<!-- About Doctor -->
+<section class="about-doctor">
+  <div class="section-label">Sobre el cirujano</div>
+  <h2 class="section-title">Quiero que vuelvas a hacer <em>lo que el peso te quitó.</em></h2>
+  <p class="section-sub">Jugar con tus hijos sin cansarte, subir escaleras sin quedarte sin aire, comprar ropa sin pena.</p>
+
+  <div class="doctor-card">
+    <div class="doctor-photo"></div>
+    <div class="doctor-body">
+      <div class="doctor-name">Dr. Giancarlo Lizárraga</div>
+      <div class="doctor-title">Cirujano general y bariátrico</div>
+      <p>Soy Giancarlo, cirujano general y bariatra. Lo que más disfruto de mi trabajo es ver a un paciente meses después y que me cuente todo lo que ya puede hacer. Para llegar ahí, empezamos platicando: me cuentas qué quieres recuperar y armamos el camino juntos.</p>
+      <ul class="doctor-creds">
+        <li>Certificado por el Consejo Mexicano de Cirugía General</li>
+        <li>+500 cirugías bariátricas realizadas</li>
+        <li>Atención bilingüe (español / inglés)</li>
+        <li>Seguimiento personal después de tu cirugía</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Why Us -->
+<section class="why">
+  <div class="section-label">Por qué Gianca Bariatrics</div>
+  <h2 class="section-title">Imagina tu vida <em>dentro de unos meses.</em></h2>
+  <p class="why-intro">Eso es lo que buscamos con cada paciente. Y para llegar ahí no vas solo: después de tu cirugía te seguimos acompañando.</p>
+
+  <div class="why-grid">
+    <div class="why-item">
+      <div class="why-item-num">01</div>
+      <div class="why-item-title">Moverte sin que el cuerpo te frene</div>
+      <div class="why-item-desc">Subir escaleras, caminar más, volver al gym o a la cancha con ganas.</div>
+    </div>
+    <div class="why-item">
+      <div class="why-item-num">02</div>
+      <div class="why-item-title">Ponerte lo que te gusta</div>
+      <div class="why-item-desc">Entrar a una tienda y escoger la ropa que quieres, no la que te queda.</div>
+    </div>
+    <div class="why-item">
+      <div class="why-item-num">03</div>
+      <div class="why-item-title">Energía para todo tu día</div>
+      <div class="why-item-desc">Llegar a la noche con ganas de convivir con los tuyos, no solo de dormir.</div>
+    </div>
+    <div class="why-item">
+      <div class="why-item-num">04</div>
+      <div class="why-item-title">Dejar de pensar en comida todo el día</div>
+      <div class="why-item-desc">Sentirte satisfecho con menos y que la comida deje de controlar tu día.</div>
+    </div>
+    <div class="why-item">
+      <div class="why-item-num">05</div>
+      <div class="why-item-title">Acompañado en cada paso</div>
+      <div class="why-item-desc">Tu cirugía es el inicio. Con tu seguimiento nos aseguramos de que el cambio se quede contigo.</div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials">
+  <div class="section-label">Pacientes</div>
+  <h2 class="section-title">Lo que dicen <em>quienes ya lo hicieron.</em></h2>
+  <p class="section-sub">Testimonios reales de pacientes en Tijuana.</p>
+
+  <div class="testimonial">
+    <p class="testimonial-text">El Dr. Giancarlo me acompañó en mi proceso de perder peso. Yo tenía muchas dudas y miedo acerca del tratamiento, pero me hizo sentir mucha confianza durante toda su atención. Los resultados fueron espectaculares, sin ningún tipo de complicación. Lo recomiendo 100%.</p>
+    <div class="testimonial-author">
+      <div class="testimonial-avatar">P</div>
+      <div>
+        <div class="testimonial-name">Paulina Mendoza</div>
+        <div class="testimonial-meta">Tijuana · ★★★★★</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial">
+    <p class="testimonial-text">El Dr. Giancarlo me explicó todo con paciencia, sin presión. Me siento yo otra vez. Lo más importante: la confianza que te da saber que él mismo está pendiente de ti antes y después de la cirugía.</p>
+    <div class="testimonial-author">
+      <div class="testimonial-avatar">M</div>
+      <div>
+        <div class="testimonial-name">María O.</div>
+        <div class="testimonial-meta">Tijuana · ★★★★★</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="section-label">Preguntas frecuentes</div>
+  <h2 class="section-title">Lo que <em>todos</em> preguntan.</h2>
+  <div class="faq-list">
+    <details class="faq-item">
+      <summary class="faq-q">¿Soy candidato para cirugía?</summary>
+      <div class="faq-a">Si tu peso está afectando tu salud o tu calidad de vida, es muy probable que sí. En tu valoración revisamos tu caso y te digo cuál es el mejor camino para ti: cirugía, tratamiento con GLP-1 o ninguno de los dos.</div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">¿Cuánto cuesta?</summary>
+      <div class="faq-a">Depende de tu caso y del tratamiento que necesites. En tu valoración te damos el precio exacto y opciones de financiamiento para que el costo no sea lo que te detenga.</div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">¿Qué tan pronto voy a notar el cambio?</summary>
+      <div class="faq-a">Muchos pacientes lo notan en las primeras semanas: la ropa les queda distinta, tienen más energía y comen con más tranquilidad. Cada cuerpo va a su ritmo, y en tus consultas de seguimiento vamos viendo tu avance.</div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">Vivo en Estados Unidos, ¿me pueden atender?</summary>
+      <div class="faq-a">Sí. Muchos de nuestros pacientes vienen de San Diego y otras ciudades de EE. UU. Te atendemos en español o en inglés y te ayudamos a organizar tu visita a Tijuana.</div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">¿Aceptan seguros médicos?</summary>
+      <div class="faq-a">Tenemos convenio con aseguradoras. Escríbenos con el nombre de tu seguro y te decimos si aplica en tu caso.</div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">¿Cómo agendo mi valoración?</summary>
+      <div class="faq-a">Escríbenos por WhatsApp o, si prefieres, envíanos un e-mail a <a href="mailto:drgiancarlolizarraga@gmail.com" style="color: var(--terra-deep); font-weight: 600;">drgiancarlolizarraga@gmail.com</a> y te damos los horarios disponibles. La valoración es sin costo.</div>
+    </details>
+  </div>
+</section>
+
+<!-- Location -->
+<section class="location">
+  <div class="section-label">Dónde estamos</div>
+  <h2 class="section-title">Te esperamos en <em>Zona Río.</em></h2>
+  <div class="location-card">
+    <div class="location-place">Hospital Blue</div>
+    <div class="location-room">Consultorio 917</div>
+    <p class="location-address">Vía Rápida Oriente 9750, Zona Urbana Río, Tijuana, B.C.</p>
+    <a href="https://maps.app.goo.gl/Tp65EmCH6TERQF3W7" target="_blank" rel="noopener" class="btn-map">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+      Cómo llegar
+    </a>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final-cta">
+  <div class="final-cta-inner">
+    <h2>Cada cambio empieza con <em>una conversación.</em></h2>
+    <p>Agenda tu valoración sin costo y resolvemos cada duda que tengas. Sin presión, sin compromiso.</p>
+    <a href="https://wa.me/526633142454?text=Hola%20Dr.%20Giancarlo%2C%20me%20gustar%C3%ADa%20agendar%20una%20valoraci%C3%B3n%20sin%20costo%2C%20me%20podr%C3%ADa%20dar%20los%20horarios%20disponibles%3F" class="btn-wa">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+      Hablar con el Dr. Giancarlo
+    </a>
+    <p class="response-time">Te respondemos tan pronto como sea posible.</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <img src="imagenes/logo.png" alt="Gianca Bariatrics">
+  Dr. Giancarlo Lizárraga · Zona Río, Tijuana<br>
+  <a href="mailto:drgiancarlolizarraga@gmail.com" style="color: var(--blue-strong); font-weight: 600;">drgiancarlolizarraga@gmail.com</a><br>
+  Cirujano general y bariátrico · Certificado por el Consejo Mexicano de Cirugía General
+  <div class="footer-links">
+    <a href="manga-gastrica">Manga gástrica</a>
+    <a href="aviso-privacidad">Aviso de privacidad</a>
+    <a href="https://wa.me/526633142454?text=Hola%20Dr.%20Giancarlo%2C%20me%20gustar%C3%ADa%20agendar%20una%20valoraci%C3%B3n%20sin%20costo%2C%20me%20podr%C3%ADa%20dar%20los%20horarios%20disponibles%3F">Contacto</a>
+  </div>
+  <p class="footer-copy">© 2026 Gianca Bariatrics. Todos los derechos reservados.</p>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/526633142454?text=Hola%20Dr.%20Giancarlo%2C%20me%20gustar%C3%ADa%20agendar%20una%20valoraci%C3%B3n%20sin%20costo%2C%20me%20podr%C3%ADa%20dar%20los%20horarios%20disponibles%3F" class="float-wa">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+  WhatsApp
+</a>
+
+<script>
+(function(){
+  if(!document.documentElement.classList.contains('anim-on'))return;
+  var sel='.section-label,.section-title,.section-sub,.why-intro,.stakes-intro,.service-card,.calc-card,.doctor-card,.authority-card,.why-item,.testimonial,.faq-item,.location-card,.stakes-item,.plan-step,.value-item,.hospital-photo,.hospital-note,.empathy>p,.empathy-quote,.financing-label,.financing h3,.financing-amount,.financing-period,.financing-note,.mid-cta p,.final-cta h2,.final-cta-inner>p:not(.response-time),.perk';
+  var stag='service-card why-item testimonial faq-item stakes-item plan-step value-item hospital-photo perk'.split(' ');
+  var els=[].slice.call(document.querySelectorAll(sel));
+  els.forEach(function(el){
+    el.classList.add('rv');
+    for(var i=0;i<stag.length;i++){if(el.classList.contains(stag[i])){
+      var sib=[].filter.call(el.parentNode.children,function(c){return c.classList.contains(stag[i])});
+      el.style.setProperty('--d',(Math.min(sib.indexOf(el),5)*0.09)+'s');break;}}
+  });
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){io.observe(el)});
+  document.querySelectorAll('.hero-trust-num').forEach(function(n){
+    var txt=n.textContent.trim(),m=txt.match(/^(\D*)([\d,]+)(\D*)$/);if(!m)return;
+    var end=parseInt(m[2].replace(/,/g,''),10),t0=null,dur=1600;
+    n.textContent=m[1]+'0'+m[3];
+    function step(t){if(!t0)t0=t;var p=Math.min((t-t0)/dur,1),v=Math.round(end*(1-Math.pow(1-p,3)));
+      n.textContent=m[1]+v.toLocaleString('en-US')+m[3];if(p<1)requestAnimationFrame(step);}
+    setTimeout(function(){requestAnimationFrame(step)},500);
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Gianca Bariatrics</title>
+<link rel="alternate" hreflang="es" href="https://giancabariatrics.com/aviso-privacidad">
+<link rel="alternate" hreflang="en" href="https://giancabariatrics.com/en/privacy-policy">
+<link rel="alternate" hreflang="x-default" href="https://giancabariatrics.com/aviso-privacidad">
+
+<meta name="description" content="Gianca Bariatrics privacy policy. How we handle your personal data under Mexico's LFPDPPP.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=DM+Sans:wght@400;500;600;700&family=Fraunces:ital,wght@0,400;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  /* PALETA GIANCA BARIATRICS (oct 2026) */
+  :root {
+    --blue: #BBCFF4;
+    --blue-soft: #DCE6FA;
+    --blue-mist: #EEF3FC;
+    --blue-strong: #4A68AD;
+    --terra: #BF7349;
+    --terra-deep: #BF7349;
+    --terra-text: #A35B35;
+    --sand-soft: #F7EEE5;
+    --white: #FFFFFF;
+    --ink: #22304F;
+    --text: #2C3958;
+    --text-soft: #4D5A75;
+    --text-muted: #6E7A93;
+    --border: rgba(34, 48, 79, 0.10);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.6;
+  }
+  a { text-decoration: none; color: var(--blue-strong); font-weight: 600; }
+  a:hover { color: var(--terra-text); }
+
+  /* === Header === */
+  header {
+    background: rgba(255,255,255,0.96);
+    padding: 12px 20px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .brand-logo { height: 60px; width: auto; display: block; }
+  .back-link {
+    color: var(--terra-text);
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .back-link svg { width: 14px; height: 14px; }
+
+  /* === Hero === */
+  .doc-hero {
+    background: linear-gradient(180deg, var(--blue-soft) 0%, var(--blue) 100%);
+    color: var(--ink);
+    padding: 60px 24px 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .doc-hero::before {
+    content: "";
+    position: absolute;
+    top: -50%; right: -30%;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(255,255,255,0.6) 0%, transparent 60%);
+  }
+  .doc-hero-inner { position: relative; z-index: 2; max-width: 720px; margin: 0 auto; }
+  .doc-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--terra-text);
+    margin-bottom: 14px;
+  }
+  .doc-hero h1 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: clamp(28px, 6vw, 42px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+    color: var(--ink);
+  }
+  .doc-hero h1 em {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--terra-deep);
+  }
+  .doc-hero p { color: var(--text-soft); font-size: 15px; }
+
+  /* === Document body === */
+  .doc-body { max-width: 720px; margin: 0 auto; padding: 50px 24px 80px; }
+  .doc-meta {
+    background: var(--blue-mist);
+    border-left: 3px solid var(--terra);
+    padding: 18px 20px;
+    margin-bottom: 36px;
+    font-size: 13.5px;
+    color: var(--text-soft);
+    line-height: 1.6;
+    border-radius: 4px;
+  }
+  .doc-meta strong { color: var(--ink); font-weight: 600; }
+  .doc-body h2 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--ink);
+    margin: 36px 0 12px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    letter-spacing: -0.01em;
+  }
+  .doc-body h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+  .doc-body h3 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--ink);
+    margin: 20px 0 8px;
+  }
+  .doc-body p { font-size: 15px; color: var(--text-soft); line-height: 1.7; margin-bottom: 14px; }
+  .doc-body ul, .doc-body ol { margin: 10px 0 18px 22px; color: var(--text-soft); font-size: 15px; line-height: 1.7; }
+  .doc-body li { margin-bottom: 8px; }
+  .doc-body li::marker { color: var(--terra); }
+  .doc-body strong { color: var(--ink); font-weight: 600; }
+  .contact-box {
+    background: var(--sand-soft);
+    border-radius: 8px;
+    padding: 24px;
+    margin: 28px 0;
+  }
+  .contact-box h3 {
+    margin-top: 0;
+    font-size: 16px;
+    color: var(--ink);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .contact-box p { margin-bottom: 6px; font-size: 14.5px; }
+
+  /* === Footer === */
+  footer {
+    background: var(--white);
+    color: var(--text-soft);
+    padding: 36px 24px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.7;
+    border-top: 3px solid var(--blue);
+  }
+  footer img { height: 90px; margin: 0 auto 14px; display: block; }
+  .footer-links { margin-top: 16px; display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; font-size: 12px; }
+  .footer-copy { margin-top: 18px; font-size: 11px; color: var(--text-muted); }
+
+  @media (min-width: 720px) {
+    .doc-hero { padding: 80px 48px 70px; }
+    .doc-body { padding: 70px 48px 100px; }
+  }
+
+  .header-right { display: flex; align-items: center; gap: 14px; }
+  .lang-switch {
+    display: inline-flex; align-items: center; gap: 5px;
+    color: var(--ink); border: 1.5px solid var(--border);
+    padding: 7px 11px; border-radius: 100px;
+    font-size: 12.5px; font-weight: 700; letter-spacing: 0.04em;
+  }
+  .lang-switch:hover { border-color: var(--terra); color: var(--terra-text); }
+  .lang-switch svg { width: 14px; height: 14px; }
+</style>
+<link rel="canonical" href="https://giancabariatrics.com/en/privacy-policy">
+<link rel="icon" href="../imagenes/logo.png">
+<script>try{if('IntersectionObserver'in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('anim-on')}catch(e){}</script>
+<style>
+/* === Animaciones al hacer scroll === */
+.anim-on .rv{opacity:0;transform:translateY(26px);transition:opacity .75s cubic-bezier(.2,.7,.2,1),transform .75s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.anim-on .rv.in{opacity:1;transform:none}
+.anim-on .hero-inner>*,.anim-on .doc-hero-inner>*{animation:heroIn .9s cubic-bezier(.2,.7,.2,1) both}
+.anim-on .hero-inner>*:nth-child(2),.anim-on .doc-hero-inner>*:nth-child(2){animation-delay:.12s}
+.anim-on .hero-inner>*:nth-child(3),.anim-on .doc-hero-inner>*:nth-child(3){animation-delay:.24s}
+.anim-on .hero-inner>*:nth-child(4){animation-delay:.36s}
+.anim-on .hero-inner>*:nth-child(5){animation-delay:.48s}
+@keyframes heroIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.hero-trust-num{font-variant-numeric:tabular-nums}
+.anim-on .hospital-photo.rv{transform:scale(.96)}
+.anim-on .hospital-photo.rv.in{transform:none}
+</style>
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','915021901361829');fbq('track','PageView');
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="wa.me"]');if(a)fbq('track','Contact');});
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=915021901361829&ev=PageView&noscript=1"/></noscript>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <a href="./"><img src="../imagenes/logo.png" alt="Gianca Bariatrics" class="brand-logo"></a>
+  <div class="header-right">
+    <a href="../aviso-privacidad" class="lang-switch" hreflang="es" lang="es" aria-label="Ver en español"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>ES</a>
+  <a href="./" class="back-link">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    Back
+  </a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="doc-hero">
+  <div class="doc-hero-inner">
+    <div class="doc-label">Legal Document</div>
+    <h1>Privacy <em>Policy</em></h1>
+    <p>How we protect and handle your personal data</p>
+  </div>
+</section>
+
+<!-- Body -->
+<div class="doc-body">
+
+  <div class="doc-meta">
+    <strong>Last updated:</strong> October 2026<br>
+    <strong>Data controller:</strong> Dr. Giancarlo Lizárraga / Gianca Bariatrics<br>
+    <strong>Address:</strong> Hospital Blue, Office 917, Vía Rápida Oriente 9750, Zona Urbana Río, Tijuana, Baja California, Mexico
+  </div>
+
+  <p><em>This English version is provided for your convenience. In case of any discrepancy, the <a href="../aviso-privacidad">Spanish version</a> shall prevail.</em></p>
+
+  <p>In compliance with Mexico's <strong>Federal Law on the Protection of Personal Data Held by Private Parties (LFPDPPP)</strong> and its Regulations, we provide this Privacy Notice to inform you how we handle the personal data you share with us.</p>
+
+  <h2>1. Identity and address of the data controller</h2>
+  <p>The party responsible for processing your personal data is <strong>Dr. Giancarlo Lizárraga</strong>, operating under the trade name <strong>Gianca Bariatrics</strong>, located at Hospital Blue, Office 917, Vía Rápida Oriente 9750, Zona Urbana Río, Tijuana, Baja California, Mexico.</p>
+
+  <h2>2. Personal data we collect</h2>
+  <p>For the purposes described in this Notice, we may collect the following categories of data:</p>
+
+  <h3>Identification and contact data</h3>
+  <ul>
+    <li>Full name</li>
+    <li>Age and date of birth</li>
+    <li>Phone number (mobile and landline)</li>
+    <li>Email address</li>
+    <li>City and country of residence</li>
+  </ul>
+
+  <h3>Sensitive personal data (health data)</h3>
+  <p>As part of the medical care we provide, we may collect sensitive data related to your health, such as:</p>
+  <ul>
+    <li>Weight, height and history of obesity</li>
+    <li>Personal and family medical history</li>
+    <li>Current conditions and medications you take</li>
+    <li>Results of clinical tests and lab work</li>
+    <li>Medical images (clinical photographs, imaging studies)</li>
+  </ul>
+  <p>Under the LFPDPPP, sensitive data requires your <strong>express consent</strong>, which is understood to be given when you voluntarily provide this information for your medical care.</p>
+
+  <h2>3. Purposes of processing</h2>
+  <p>Your personal data will be used for the following purposes:</p>
+
+  <h3>Primary purposes (necessary for the service)</h3>
+  <ul>
+    <li>Providing medical care, clinical evaluation and surgical services</li>
+    <li>Creating and maintaining your medical record</li>
+    <li>Coordinating consultations, appointments and post-operative follow-up</li>
+    <li>Managing payment plans, financing and invoicing</li>
+    <li>Complying with applicable legal, tax and health regulations</li>
+    <li>Communicating with you electronically (WhatsApp, email, phone calls)</li>
+  </ul>
+
+  <h3>Secondary purposes (not necessary for the service)</h3>
+  <ul>
+    <li>Sending information about new services, promotions or events</li>
+    <li>Satisfaction surveys and continuous improvement</li>
+    <li>Use of testimonials or results for educational or promotional purposes (only with your additional written consent)</li>
+  </ul>
+  <p>If you do not want your data used for secondary purposes, you may let us know at any time through the channels listed in section 8.</p>
+
+  <h2>4. Transfer of personal data</h2>
+  <p>Your personal data may be shared with:</p>
+  <ul>
+    <li><strong>Hospitals and medical centers</strong> where your procedure takes place, solely for its clinical and administrative purposes</li>
+    <li><strong>Healthcare professionals</strong> involved in your care (anesthesiologists, nutritionists, psychologists, laboratories)</li>
+    <li><strong>Insurance companies</strong> we have agreements with, only when you choose to use your medical insurance and for the related paperwork</li>
+    <li><strong>Health or judicial authorities</strong> when legally required</li>
+    <li><strong>Technology service providers</strong> (medical management systems, communication platforms) under strict confidentiality agreements</li>
+  </ul>
+  <p>We do not sell, trade or transfer your personal data to third parties for purposes other than those described in this Notice.</p>
+
+  <h2>5. How we limit the use or disclosure of your data</h2>
+  <p>We implement administrative, technical and physical measures to protect your personal data against damage, loss, alteration, destruction or unauthorized use. These measures include:</p>
+  <ul>
+    <li>Access to medical records restricted to authorized personnel only</li>
+    <li>Secure storage of data in protected systems</li>
+    <li>Staff training on data protection</li>
+    <li>Confidentiality agreements with collaborators and providers</li>
+  </ul>
+
+  <h2>6. ARCO rights</h2>
+  <p>As the owner of your data, you have the right to:</p>
+  <ul>
+    <li><strong>Access</strong> the personal data we hold about you</li>
+    <li><strong>Rectify</strong> it when it is inaccurate or incomplete</li>
+    <li><strong>Cancel</strong> it when you consider it is no longer necessary for the stated purposes</li>
+    <li><strong>Object</strong> to the processing of your data for specific purposes</li>
+  </ul>
+  <p>You may also <strong>revoke your consent</strong> at any time, and <strong>limit the use or disclosure</strong> of your information.</p>
+
+  <h2>7. Use of cookies and similar technologies</h2>
+  <p>Our website may use cookies and similar technologies to improve your browsing experience, analyze traffic and personalize content. We also use tracking pixels (Meta Pixel) to measure the effectiveness of our advertising campaigns.</p>
+  <p>You can set your browser to disable cookies; however, this may affect how the site works.</p>
+
+  <h2>8. How to exercise your rights</h2>
+  <p>To exercise any of the rights above, or to limit the use of your data, you can contact us through the following channels:</p>
+
+  <div class="contact-box">
+    <h3>Contact information</h3>
+    <p><strong>Email:</strong> <a href="mailto:drgiancarlolizarraga@gmail.com">drgiancarlolizarraga@gmail.com</a></p>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/526633142454">+52 663 314 2454</a></p>
+    <p><strong>Address:</strong> Hospital Blue, Office 917, Vía Rápida Oriente 9750, Zona Urbana Río, Tijuana, Baja California, Mexico</p>
+    <p style="margin-top: 14px; font-size: 13px; color: var(--text-muted);">Your request must include your full name, a copy of an official ID, a clear description of the right you wish to exercise and contact details for our response.</p>
+  </div>
+
+  <p>We will respond within a maximum of <strong>20 business days</strong>, as established by the LFPDPPP.</p>
+
+  <h2>9. Changes to this Privacy Notice</h2>
+  <p>We reserve the right to modify this Privacy Notice at any time. Any changes will be published on this page, with the date of the last update shown at the top of the document.</p>
+  <p>We recommend reviewing this Notice periodically to stay informed about how we protect your information.</p>
+
+  <h2>10. Acceptance of this Notice</h2>
+  <p>By providing your personal data through any channel (WhatsApp, email, phone call or in person), <strong>you give your express consent</strong> to its processing under the terms described in this Privacy Notice.</p>
+
+</div>
+
+<!-- Footer -->
+<footer>
+  <img src="../imagenes/logo.png" alt="Gianca Bariatrics">
+  Dr. Giancarlo Lizárraga · Zona Río, Tijuana<br>
+  <a href="mailto:drgiancarlolizarraga@gmail.com">drgiancarlolizarraga@gmail.com</a><br>
+  General and bariatric surgeon · Certified by the Mexican Board of General Surgery
+  <div class="footer-links">
+    <a href="./">Home</a>
+    <a href="gastric-sleeve">Gastric sleeve</a>
+    <a href="https://wa.me/526633142454?text=Hi%20Dr.%20Giancarlo%2C%20I%27d%20like%20to%20book%20a%20free%20consultation.%20Could%20you%20share%20your%20available%20times%3F">Contact</a>
+  </div>
+  <p class="footer-copy">© 2026 Gianca Bariatrics. All rights reserved.</p>
+</footer>
+
+<script>
+(function(){
+  if(!document.documentElement.classList.contains('anim-on'))return;
+  var sel='.section-label,.section-title,.section-sub,.why-intro,.stakes-intro,.service-card,.calc-card,.doctor-card,.authority-card,.why-item,.testimonial,.faq-item,.location-card,.stakes-item,.plan-step,.value-item,.hospital-photo,.hospital-note,.empathy>p,.empathy-quote,.financing-label,.financing h3,.financing-amount,.financing-period,.financing-note,.mid-cta p,.final-cta h2,.final-cta-inner>p:not(.response-time),.perk';
+  var stag='service-card why-item testimonial faq-item stakes-item plan-step value-item hospital-photo perk'.split(' ');
+  var els=[].slice.call(document.querySelectorAll(sel));
+  els.forEach(function(el){
+    el.classList.add('rv');
+    for(var i=0;i<stag.length;i++){if(el.classList.contains(stag[i])){
+      var sib=[].filter.call(el.parentNode.children,function(c){return c.classList.contains(stag[i])});
+      el.style.setProperty('--d',(Math.min(sib.indexOf(el),5)*0.09)+'s');break;}}
+  });
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){io.observe(el)});
+  document.querySelectorAll('.hero-trust-num').forEach(function(n){
+    var txt=n.textContent.trim(),m=txt.match(/^(\D*)([\d,]+)(\D*)$/);if(!m)return;
+    var end=parseInt(m[2].replace(/,/g,''),10),t0=null,dur=1600;
+    n.textContent=m[1]+'0'+m[3];
+    function step(t){if(!t0)t0=t;var p=Math.min((t-t0)/dur,1),v=Math.round(end*(1-Math.pow(1-p,3)));
+      n.textContent=m[1]+v.toLocaleString('en-US')+m[3];if(p<1)requestAnimationFrame(step);}
+    setTimeout(function(){requestAnimationFrame(step)},500);
+  });
+})();
+</script>
+</body>
+</html>
